@@ -156,6 +156,7 @@ public class AuthorizationServerConfig {
 			if (context.getTokenType().getValue().equals("access_token")) {
 				// @formatter:off
 				context.getClaims()
+				    .claim("name", "Ruben")
 					.claim("authorities", authorities)
 					.claim("username", user.getUsername());
 				// @formatter:on
